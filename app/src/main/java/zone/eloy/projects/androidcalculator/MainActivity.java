@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonDot;
 
     TextView textViewInputNumbers;
+    TextView textViewResultNumbers;
 
     ScriptEngine scriptEngine;
 
@@ -92,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonEqual = (Button) findViewById(R.id.button_equal);
         buttonDot = (Button) findViewById(R.id.button_dot);
         textViewInputNumbers = (TextView) findViewById(R.id.textView_input_numbers);
+        textViewResultNumbers = (TextView) findViewById(R.id.textView_result_numbers);
+
     }
 
     private void setOnClickListeners()
@@ -199,6 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_clear:
                 textViewInputNumbers.setText("");
+                textViewResultNumbers.setText("");
                 openParenthesis = 0;
                 dotUsed = false;
                 equalClicked = false;
@@ -389,6 +394,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void calculate(String input)
     {
         String result = "";
+//        Log.e("test","entered method");
+//        Logcat -> filter 사용해서, tag("test") 검색 -> e로 표시된 값이 호출 <- log 따라가기!!
+
         try
         {
             String temp = input;
@@ -400,6 +408,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 saveLastExpression(input);
             }
             result = scriptEngine.eval(temp.replaceAll("%", "/100").replaceAll("x", "*").replaceAll("[^\\x00-\\x7F]", "/")).toString();
+//            Log.e("test","value: "+ result);
+
             BigDecimal decimal = new BigDecimal(result);
             result = decimal.setScale(8, BigDecimal.ROUND_HALF_UP).toPlainString();
             equalClicked = true;
@@ -418,7 +428,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (result.contains("."))
         {
             result = result.replaceAll("\\.?0*$", "");
-            textViewInputNumbers.setText(result);
+            textViewResultNumbers.setText("= " + result);
         }
     }
 
