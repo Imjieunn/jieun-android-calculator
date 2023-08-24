@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:gravity="end"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="40sp" />
 
     </LinearLayout>
@@ -47,7 +47,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="C"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="30sp" />
 
         <Button
@@ -59,7 +59,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="( )"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="30sp" />
 
         <Button
@@ -71,7 +71,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="%"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="30sp" />
 
         <Button
@@ -83,7 +83,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="\u00F7"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="40sp" />
     </LinearLayout>
 
@@ -138,7 +138,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="x"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -194,7 +194,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="-"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="40sp" />
     </LinearLayout>
 
@@ -250,7 +250,7 @@
             android:layout_weight="1"
             android:background="@android:color/black"
             android:text="+"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/holo_orange_light"
             android:textSize="40sp" />
     </LinearLayout>
 
@@ -295,7 +295,7 @@
             android:layout_marginRight="0.1dp"
             android:layout_marginTop="0.1dp"
             android:layout_weight="1"
-            android:background="@android:color/holo_red_dark"
+            android:background="@android:color/holo_orange_light"
             android:text="="
             android:textColor="@android:color/white"
             android:textSize="40sp" />
